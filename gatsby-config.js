@@ -48,12 +48,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `9o07roe0gz0h`,

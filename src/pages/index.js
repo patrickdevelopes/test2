@@ -18,30 +18,4 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
-      nodes {
-        excerpt
-        frontmatter {
-          title
-          author
-          category
-          date(formatString: "MMMM Do, YYYY")
-          slug
-          readTime
-          image {
-            childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        id
-      }
-    }
-  }
-`
-
 export default IndexPage

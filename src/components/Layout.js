@@ -7,7 +7,6 @@
 
 import React from 'react'
 import Navbar from './Navbar'
-import Sidebar from './Sidebar'
 import Footer from './Footer'
 import BeforeFooter from './BeforeFooter'
 import CookieConsent from 'react-cookie-consent';
