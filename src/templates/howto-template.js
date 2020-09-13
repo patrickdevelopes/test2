@@ -10,57 +10,54 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Image from 'gatsby-image'
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 
 const HowtoTemplate = ({
-    data: {
-        howto: {
-            title,
-            date,
-            excerpt: { excerpt },
-            body,
-            image: { fixed },
-            author,
-        },
+  data: {
+    howto: {
+      title,
+      date,
+      excerpt: { excerpt },
+      body,
+      image: { fixed },
+      author,
     },
+  },
 }) => {
 
-    return (
-        <Layout>
-            <Wrapper>
-                <div className="search-text" style={{ textAlign: "left" }}>
-                    <Link to="/howto" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-                </div>
+  return (
+    <Layout>
+      <Wrapper>
+        <div className="search-text" style={{ textAlign: "left" }}>
+          <Link to="/howto" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+        </div>
+        <article>
+          <section className="posts">
+            <div className="posts-center-growing">
+              <div className="product-grid-strains">
                 <article>
-                    <section className="posts">
-                        <div className="posts-center-growing">
-                            <div className="product-grid-strains">
-                                <article>
-                                    <div className="post-info">
-                                        <h2>{title}</h2>
-                                        <p>{excerpt}</p>
-                                        <div className="article-info">
-                                            <p>{author}</p>
-                                            <p>{date}</p>
-                                        </div>
-                                        <span>{date}</span>
-                                        <div className="underline"></div>
-                                    </div>
-                                    <Image fixed={fixed} alt={title} />
-                                    {documentToReactComponents(body.json)}
-                                </article>
-                            </div>
-                            <article>
-                                <ProductBanner />
-                            </article>
-                        </div>
-                    </section>
+                  <div className="post-info">
+                    <h2>{title}</h2>
+                    <p>{excerpt}</p>
+                    <div className="article-info">
+                      <p>{author}</p>
+                      <p>{date}</p>
+                    </div>
+                    <span>{date}</span>
+                    <div className="underline"></div>
+                  </div>
+                  <Image fixed={fixed} alt={title} />
+                  {documentToReactComponents(body.json)}
                 </article>
-            </Wrapper>
-        </Layout >
-    )
+              </div>
+              <article>
+                <ProductBanner />
+              </article>
+            </div>
+          </section>
+        </article>
+      </Wrapper>
+    </Layout >
+  )
 }
 
 export const query = graphql`

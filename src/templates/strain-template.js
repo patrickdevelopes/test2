@@ -13,11 +13,6 @@ import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-
 const StrainTemplate = ({
     data: {
         strain: {
