@@ -4,8 +4,8 @@ require("dotenv").config({
 const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MDX Blog`,
-    description: `Awesome Blog built with Gatsby and MDX`,
+    title: `Weeds Home`,
+    description: `Awesome Blog built with Gatsby and Contentful`,
     titleTemplate: `%s MDX Blog`,
     url: `https://mdx-blog.netlify.app/`,
     image: `mainImg.png`,
@@ -90,6 +90,7 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         googleAnalytics: {
           trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
