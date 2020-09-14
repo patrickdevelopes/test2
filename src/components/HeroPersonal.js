@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
 import Typewriter from 'typewriter-effect'
-import Glitch from './glitch'
 
 class HeroPersonal extends React.Component {
 
@@ -66,22 +65,6 @@ class HeroPersonal extends React.Component {
         margin: 0 auto;
         margin-right: auto;
         margin-left: auto;
-        `
-
-        const Heading = styled.div`
-            .glitch {
-                font-family: Teko;
-                text-transform: uppercase;
-                font-size: 150px;
-                line-height: 140px;
-                font-weight: 600;
-                color: black;
-                margin-bottom: 0;
-                @media (max-width: 767px) {
-                    font-size: 40px;
-                    line-height: 50px;
-                }
-            }
         `
 
         const SubHeading = styled.h2`
@@ -174,7 +157,6 @@ class HeroPersonal extends React.Component {
                             Welcome on
                         </SubHeading>
                         <Heading className="parallax-hero-item">
-                            <Glitch text="Weed's Home" />
                         </Heading>
                         <Type className="parallax-hero-item">
                             <Typewriter

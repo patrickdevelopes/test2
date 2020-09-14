@@ -1,27 +1,26 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-const queries = require("./src/constants/algolia")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MDX Blog`,
-    description: `Awesome Blog built with Gatsby and MDX`,
-    titleTemplate: `%s MDX Blog`,
+    title: `Gatsby Contentful Blog`,
+    description: `Awesome Blog built with Gatsby and Contentful`,
+    titleTemplate: `%s Contentful Blog`,
     url: `https://mdx-blog.netlify.app/`,
     image: `mainImg.png`,
-    twitterUsername: `@john_smilga`,
+    twitterUsername: `@john`,
   },
 
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: `${__diarname}/src/assets`,
       },
     },
     {
@@ -36,9 +35,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `9o07roe0gz0h`,
+        spaceId: ``,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `KL4_SRyDhpmqnlqsJ1cMlfeuXOSFQ6MBGlA-dUrd-MM`,
+        accessToken: ``,
         forceFullSync: true,
       },
     },
