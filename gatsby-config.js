@@ -43,16 +43,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: "1DR891HL15",
-        apiKey: "a2a259879ba297d63c0aea215b854c9c",
-        indexName: "strains",
-        queries: require("./src/constants/algolia"),
-        chunkSize: 10000,
-      },
-    },
-    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
